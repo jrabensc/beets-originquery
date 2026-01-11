@@ -1,11 +1,17 @@
 from collections import OrderedDict
 
-from beets_originquery.originquery import (
+from beetsplug.originquery import (
     BEETS_TO_LABEL,
     CONFLICT_FIELDS,
     escape_braces,
     normalize_catno,
 )
+
+
+def test_plugin_importable():
+    import beetsplug.originquery
+
+    assert hasattr(beetsplug.originquery, "OriginQuery")
 
 
 def test_beets_to_label_is_ordered_dict():
