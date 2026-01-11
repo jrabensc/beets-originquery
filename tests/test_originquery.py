@@ -1,6 +1,12 @@
 from collections import OrderedDict
 
-from beets_originquery.originquery import BEETS_TO_LABEL, CONFLICT_FIELDS, escape_braces, normalize_catno
+from beets_originquery.originquery import (
+    BEETS_TO_LABEL,
+    CONFLICT_FIELDS,
+    escape_braces,
+    normalize_catno,
+)
+
 
 def test_beets_to_label_is_ordered_dict():
     assert isinstance(BEETS_TO_LABEL, OrderedDict)
@@ -40,6 +46,7 @@ def test_conflict_fields_are_known_keys():
     missing = [f for f in CONFLICT_FIELDS if f not in BEETS_TO_LABEL]
     assert missing == []
 
+
 def test_no_braces():
     assert escape_braces("hello") == "hello"
 
@@ -66,6 +73,7 @@ def test_multiple_braces():
 
 def test_empty_string_escape_braces():
     assert escape_braces("") == ""
+
 
 def test_uppercase():
     assert normalize_catno("abc") == "ABC"
