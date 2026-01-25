@@ -1,16 +1,16 @@
-import confuse
 import glob
 import json
-import jsonpath_rw
 import os
 import re
-import sys
-import yaml
 from collections import OrderedDict
-from beets import config, ui
-from beets.util import get_most_common_tags
-from beets.plugins import BeetsPlugin
 from pathlib import Path
+
+import confuse
+import jsonpath_rw
+import yaml
+from beets import config, ui
+from beets.plugins import BeetsPlugin
+from beets.util import get_most_common_tags
 
 BEETS_TO_LABEL = OrderedDict(
     [

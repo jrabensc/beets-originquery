@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-from beetsplug.originquery import (
+from beetsplug.beets_originquery.originquery import (
     BEETS_TO_LABEL,
     CONFLICT_FIELDS,
     escape_braces,
@@ -9,9 +9,9 @@ from beetsplug.originquery import (
 
 
 def test_plugin_importable():
-    import beetsplug.originquery
+    import beetsplug.beets_originquery.originquery
 
-    assert hasattr(beetsplug.originquery, "OriginQuery")
+    assert hasattr(beetsplug.beets_originquery.originquery, "OriginQuery")
 
 
 def test_beets_to_label_is_ordered_dict():
