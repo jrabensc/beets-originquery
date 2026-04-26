@@ -8,7 +8,7 @@ authors = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "beets>=2.5.1",
+    "beets>=2.10.0",
     "confuse>=2.1.0",
     "jsonpath-rw>=1.4.0",
 ]
